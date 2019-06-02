@@ -1,0 +1,54 @@
+{
+    "name": "neurony/laravel-redirects",
+    "description": "Nested URLs redirect logic for Laravel",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "redirect",
+        "url"
+    ],
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Andrei Badea",
+            "email": "zbiller@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "illuminate/contracts": "~5.7.0|~5.8.0",
+        "illuminate/support": "~5.7.0|~5.8.0",
+        "illuminate/database": "~5.7.0|~5.8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.7.0|~3.8.0",
+        "phpunit/phpunit": "~7.0|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Neurony\\Redirects\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Neurony\\Redirects\\Tests\\": "tests"
+        },
+        "classmap": [
+            "tests/TestCase.php"
+        ]
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Neurony\\Redirects\\ServiceProvider"
+            ]
+        }
+    }
+}
