@@ -5,7 +5,9 @@
     "keywords": [
         "laravel",
         "redirect",
-        "url"
+        "url",
+        "slug",
+        "seo"
     ],
     "minimum-stability": "dev",
     "authors": [
