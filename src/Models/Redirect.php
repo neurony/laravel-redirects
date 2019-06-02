@@ -28,26 +28,6 @@ class Redirect extends Model implements RedirectModelContract
     ];
 
     /**
-     * The constants defining the redirect status codes available.
-     *
-     * @const
-     */
-    const STATUS_NORMAL = 302;
-    const STATUS_PERMANENT = 301;
-    const STATUS_TEMPORARY = 307;
-
-    /**
-     * The property defining the redirect status codes available.
-     *
-     * @var array
-     */
-    public static $statuses = [
-        self::STATUS_PERMANENT => 'Permanent (301)',
-        self::STATUS_NORMAL => 'Normal (302)',
-        self::STATUS_TEMPORARY => 'Temporary (307)',
-    ];
-
-    /**
      * Boot the model.
      *
      * @return void
