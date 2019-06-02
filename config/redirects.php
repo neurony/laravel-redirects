@@ -28,6 +28,6 @@ return [
     | - or you could even use your own class as a direct implementation
     |
     */
-    'revision_model' => \Neurony\Redirects\Models\Redirect::class,
+    'redirect_model' => \Neurony\Redirects\Models\Redirect::class,
 
 ];
