@@ -44,5 +44,5 @@ interface RedirectModelContract
      * @param string $path
      * @return RedirectModelContract|null
      */
-    public static function findValidOrNull($path): self;
+    public static function findValidOrNull($path): ?self;
 }

@@ -25,7 +25,7 @@ class Redirect extends Model implements RedirectModelContract
         'old_url',
         'new_url',
         'status',
-    ];
+    ];\
 
     /**
      * Boot the model.
@@ -129,9 +129,9 @@ class Redirect extends Model implements RedirectModelContract
      * @param string $path
      * @return Redirect|null
      */
-    public static function findValidOrNull($path): RedirectModelContract
+    public static function findValidOrNull($path): ?RedirectModelContract
     {
-        return static::where('old_url', trim($path, '/'))
+        return static::where('old_url', $path === '/' ? $path : trim($path, '/'))
             ->whereNotNull('new_url')
             ->whereIn('status', array_keys(self::getStatuses()))
             ->latest()->first();
