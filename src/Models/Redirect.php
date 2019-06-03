@@ -25,7 +25,7 @@ class Redirect extends Model implements RedirectModelContract
         'old_url',
         'new_url',
         'status',
-    ];\
+    ];
 
     /**
      * Boot the model.
