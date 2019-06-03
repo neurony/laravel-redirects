@@ -4,10 +4,10 @@ namespace Neurony\Redirects;
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
-use Neurony\Redirects\Contracts\RedirectModelContract;
-use Neurony\Redirects\Middleware\RedirectRequests;
 use Neurony\Redirects\Models\Redirect;
 use Illuminate\Contracts\Foundation\Application;
+use Neurony\Redirects\Middleware\RedirectRequests;
+use Neurony\Redirects\Contracts\RedirectModelContract;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 class ServiceProvider extends BaseServiceProvider

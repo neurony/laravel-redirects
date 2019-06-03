@@ -38,11 +38,11 @@ interface RedirectModelContract
      * @param string $finalUrl
      * @return void
      */
-    public function syncOldRedirects(RedirectModelContract $model, string $finalUrl): void;
+    public function syncOldRedirects(self $model, string $finalUrl): void;
 
     /**
      * @param string $path
      * @return RedirectModelContract|null
      */
-    public static function findValidOrNull($path): RedirectModelContract;
+    public static function findValidOrNull($path): self;
 }

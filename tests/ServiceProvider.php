@@ -2,9 +2,9 @@
 
 namespace Neurony\Redirects\Tests;
 
-use Neurony\Redirects\Contracts\RedirectModelContract;
 use Neurony\Redirects\Models\Redirect;
 use Illuminate\Contracts\Foundation\Application;
+use Neurony\Redirects\Contracts\RedirectModelContract;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 class ServiceProvider extends BaseServiceProvider
