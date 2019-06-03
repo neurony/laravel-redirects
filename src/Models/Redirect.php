@@ -2,10 +2,10 @@
 
 namespace Neurony\Redirects\Models;
 
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Neurony\Redirects\Contracts\RedirectModelContract;
+use Illuminate\Database\Eloquent\Builder;
 use Neurony\Redirects\Exceptions\RedirectException;
+use Neurony\Redirects\Contracts\RedirectModelContract;
 
 class Redirect extends Model implements RedirectModelContract
 {
@@ -100,7 +100,7 @@ class Redirect extends Model implements RedirectModelContract
      */
     public static function getStatuses(): array
     {
-        return (array)config('redirects.statuses', []);
+        return (array) config('redirects.statuses', []);
     }
 
     /**
@@ -113,7 +113,7 @@ class Redirect extends Model implements RedirectModelContract
     public function syncOldRedirects(RedirectModelContract $model, string $finalUrl): void
     {
         $items = static::whereNewUrl($model->old_url)->get();
- 
+
         foreach ($items as $item) {
             $item->update(['new_url' => $finalUrl]);
             $item->syncOldRedirects($model, $finalUrl);
@@ -124,7 +124,7 @@ class Redirect extends Model implements RedirectModelContract
      * Return a valid redirect entity for a given path (old url).
      * A redirect is valid if:
      * - it has an url to redirect to (new url)
-     * - it's status code is one of the statuses defined on this model
+     * - it's status code is one of the statuses defined on this model.
      *
      * @param string $path
      * @return Redirect|null
