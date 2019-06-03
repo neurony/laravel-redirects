@@ -1,5 +1,9 @@
 # Nested redirects for Laravel
 
+[![Build Status](https://travis-ci.org/Neurony/laravel-redirects.svg?branch=master)](https://travis-ci.org/Neurony/laravel-redirects)
+[![StyleCI](https://github.styleci.io/repos/189837919/shield?branch=master)](https://github.styleci.io/repos/189837919)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Neurony/laravel-redirects/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Neurony/laravel-redirects/?branch=master)
+
 - [Overview](#overview)   
 - [Installation](#installation)   
 - [Usage](#usage)   
