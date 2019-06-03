@@ -17,8 +17,8 @@ class RedirectRequests
     {
         $redirect = app('redirect.model')->findValidOrNull($request->path());
 
-        if (!$redirect && $request->getQueryString()) {
-            $path = $request->path() . '?' . $request->getQueryString();
+        if (! $redirect && $request->getQueryString()) {
+            $path = $request->path().'?'.$request->getQueryString();
             $redirect = app('redirect.model')->findValidOrNull($path);
         }
 

@@ -2,8 +2,8 @@
 
 namespace Neurony\Redirects\Tests;
 
-use Neurony\Redirects\Exceptions\RedirectException;
 use Neurony\Redirects\Models\Redirect;
+use Neurony\Redirects\Exceptions\RedirectException;
 
 class RedirectTest extends TestCase
 {
