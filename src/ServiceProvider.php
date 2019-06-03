@@ -2,6 +2,7 @@
 
 namespace Neurony\Redirects;
 
+use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 use Neurony\Redirects\Models\Redirect;
@@ -12,6 +13,11 @@ use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 class ServiceProvider extends BaseServiceProvider
 {
+    /**
+     * @var Router
+     */
+    protected $router;
+
     /**
      * Create a new service provider instance.
      *
@@ -25,10 +31,13 @@ class ServiceProvider extends BaseServiceProvider
     /**
      * Bootstrap the application services.
      *
+     * @param Router $router
      * @return void
      */
-    public function boot()
+    public function boot(Router $router)
     {
+        $this->router = $router;
+
         $this->publishConfigs();
         $this->publishMigrations();
         $this->registerMiddleware();
