@@ -100,7 +100,7 @@ class ServiceProvider extends BaseServiceProvider
      */
     protected function registerBindings()
     {
-        $this->app->bind(RedirectModelContract::class, $this->config['revisions']['revision_model'] ?? Redirect::class);
-        $this->app->alias(RedirectModelContract::class, 'revision.model');
+        $this->app->bind(RedirectModelContract::class, $this->config['redirects']['redirect_model'] ?? Redirect::class);
+        $this->app->alias(RedirectModelContract::class, 'redirect.model');
     }
 }
