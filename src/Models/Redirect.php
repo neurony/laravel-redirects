@@ -36,7 +36,7 @@ class Redirect extends Model implements RedirectModelContract
     {
         parent::boot();
 
-        static::saving(function (Redirect $model) {
+        static::saving(function (self $model) {
             if (trim(strtolower($model->old_url), '/') == trim(strtolower($model->new_url), '/')) {
                 throw RedirectException::sameUrls();
             }
