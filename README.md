@@ -88,7 +88,7 @@ You can create redirects that will be stored inside the `redirects` table like t
 ```php
 app('redirect.model')->create([
     'old_url' => '/your-old-url',
-    'new_url => '/your-new-url',
+    'new_url' => '/your-new-url',
     'status' => 301
 ]);
 ```
