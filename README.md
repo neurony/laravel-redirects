@@ -74,7 +74,7 @@ Go to `App\Http\Kernel` and add the `Neurony\Redirects\Middleware\RedirectReques
 protected $middlewareGroups = [
     'web' => [
         ...
-        \App\Http\Middleware\RedirectRequests::class,
+        \Neurony\Redirects\Middleware\RedirectRequests::class,
 ```
 
 ### Creating redirects
