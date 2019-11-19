@@ -2,10 +2,10 @@
 
 namespace Neurony\Redirects\Tests;
 
-use Illuminate\Contracts\Http\Kernel;
-use Orchestra\Testbench\TestCase as Orchestra;
 use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\Http\Kernel;
 use Neurony\Redirects\Middleware\RedirectRequests;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 abstract class TestCase extends Orchestra
 {
