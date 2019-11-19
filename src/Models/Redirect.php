@@ -2,10 +2,10 @@
 
 namespace Neurony\Redirects\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
-use Neurony\Redirects\Exceptions\RedirectException;
+use Illuminate\Database\Eloquent\Model;
 use Neurony\Redirects\Contracts\RedirectModelContract;
+use Neurony\Redirects\Exceptions\RedirectException;
 
 class Redirect extends Model implements RedirectModelContract
 {
