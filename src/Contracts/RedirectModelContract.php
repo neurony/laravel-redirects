@@ -31,7 +31,7 @@ interface RedirectModelContract
     /**
      * @return array
      */
-    public static function getStatuses() : array;
+    public static function getStatuses(): array;
 
     /**
      * @param RedirectModelContract $model
