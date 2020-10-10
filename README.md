@@ -1,4 +1,18 @@
-# Nested redirects for Laravel
+# Package discontinued! Check out VARBOX.IO instead.
+
+Unfortunately this package is now discontinued.   
+Please check out [Varbox](https://varbox.io) (Laravel Admin Panel) for this functionality and much more.
+
+- Buy: [https://varbox.io/buy](https://varbox.io/buy)
+- Docs: [https://varbox.io/docs](https://varbox.io/docs)
+- Demo: [https://demo.varbox.test/admin](https://demo.varbox.test/admin)
+- Repo [https://github.com/VarboxInternational/varbox](https://github.com/VarboxInternational/varbox)
+
+Thank you! 
+
+---
+
+### Nested redirects for Laravel
 
 [![Build Status](https://travis-ci.org/Neurony/laravel-redirects.svg?branch=master)](https://travis-ci.org/Neurony/laravel-redirects)
 [![StyleCI](https://github.styleci.io/repos/189837919/shield?branch=master)](https://github.styleci.io/repos/189837919)
@@ -8,7 +22,7 @@
 - [Installation](#installation)   
 - [Usage](#usage)   
 
-# Overview
+### Overview
 
 This package allows you to create simple or multiple nested redirects for your Laravel applications.   
    
@@ -31,7 +45,7 @@ This package can be useful from an SEO perspective, when in your application, yo
   > Accessing `/modified-again` will redirect to `/original` AND   
   > Accessing `/modified` will redirect to `/original`
   
-# Installation
+### Installation
 
 Install the package via Composer:
 
@@ -57,9 +71,9 @@ After the migration has been published you can create the `redirects` table by r
 php artisan migrate
 ```
 
-# Usage
+### Usage
 
-### Add the middleware
+##### Add the middleware
 
 In order for the redirecting functionality to actually happen, you need to add the `Neurony\Redirects\Middleware\RedirectRequests` middleware.
 
@@ -77,7 +91,7 @@ protected $middlewareGroups = [
         \Neurony\Redirects\Middleware\RedirectRequests::class,
 ```
 
-### Creating redirects
+##### Creating redirects
 
 You should never use the `Neurony\Redirects\Models\Redirect` directly, as this is the default concrete implementation for the `Neurony\Redirects\Contracts\RedirectModelContract`.   
   
@@ -95,23 +109,23 @@ app('redirect.model')->create([
 
 To see how you can extend the `Neurony\Redirects\Models\Redirect` model's capabilities, please read the comments from `/config/redirects.php -> redirect_model`
 
-# Credits
+### Credits
 
 - [Andrei Badea](https://github.com/zbiller)
 - [All Contributors](../../contributors)
 
-# Security
+### Security
 
 If you discover any security related issues, please email andrei.badea@neurony.ro instead of using the issue tracker.
 
-# License
+### License
 
 The MIT License (MIT). Please see [LICENSE](LICENSE.md) for more information.
 
-# Changelog
+### Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
-# Contributing
+### Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
